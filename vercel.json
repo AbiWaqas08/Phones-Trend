@@ -1,5 +1,39 @@
 {
-    "version": 2,
-    "builds":[{ "src": "./app.js", "use":"@vercel/node"}],
-    "routes": [{ "src": "/(.*)", "dest": "/"}]
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/uploads/(.*)",
+      "dest": "/uploads/$1"
+    },
+    {
+      "src": "/api/brands",
+      "dest": "/api/brands"
+    },
+    {
+      "src": "/api/blogs",
+      "dest": "/api/blogs"
+    },
+    {
+      "src": "/api/mobiles",
+      "dest": "/api/mobiles"
+    },
+    {
+      "src": "/api/contact",
+      "dest": "/api/contact"
+    },
+    {
+      "src": "/api/slides",
+      "dest": "/api/slides"
+    },
+    {
+      "src": "/",
+      "dest": "/"
+    }
+  ]
 }
